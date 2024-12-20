@@ -6,7 +6,7 @@ const baseSiteConfig = {
   description:
     "Heuristic Agent easily implement your creativity.",
   url: "https://www.nsfwmonika.ai/",
-  // ogImage: "https://og.png",
+  ogImage: "https://og.png",
   metadataBase: '/',
   keywords: ["Monika Al"],
   authors: [
@@ -22,9 +22,9 @@ const baseSiteConfig = {
   ],
   nextThemeColor: 'dark', // next-theme option: system | dark | light
   icons: {
-    // icon: "/favicon.ico",
-    // shortcut: "/favicon-16x16.png",
-    // apple: "/logo.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/logo.png",
   },
   headerLinks: [
     { name: 'Twitter', href: "https://x.com/NSFW_monika", icon: BsTwitterX },

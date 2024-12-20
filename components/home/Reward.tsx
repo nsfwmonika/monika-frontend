@@ -17,13 +17,13 @@ const Reward = ({ id, }: { id: string; }) => {
             <h2 className="font-semibold mb-4 text-4xl">Register</h2>
             <div className="text-gray-400 text-base my-[30px] text-2xl">
               <p>
-                Exciting News! We're thrilled to announce our exclusive invitation and registration event, designed to introduce you to the groundbreaking world of our AI content creation platform and digital human technology.
+                Exciting News! We&apos;re thrilled to announce our exclusive invitation and registration event, designed to introduce you to the groundbreaking world of our AI content creation platform and digital human technology.
               </p>
               <p className="my-4">
-                Don't miss out on this incredible opportunity to transform your content strategy and unlock new possibilities for your brand. Register now and join the ranks of forward-thinking companies who are leveraging the power of AI and blockchain to create, innovate, and inspire.
+                Don&apos;t miss out on this incredible opportunity to transform your content strategy and unlock new possibilities for your brand. Register now and join the ranks of forward-thinking companies who are leveraging the power of AI and blockchain to create, innovate, and inspire.
               </p>
               <p>
-                We can't wait to welcome you to our community and embark on this exciting journey together. Sign up today and let's start creating the future of content!
+                We can&apos;t wait to welcome you to our community and embark on this exciting journey together. Sign up today and let&apos;s start creating the future of content!
               </p>
 
             </div>
@@ -58,15 +58,15 @@ const Reward = ({ id, }: { id: string; }) => {
             <h2 className="font-semibold mb-4 text-4xl">Invite</h2>
             <div className="text-gray-400 text-base my-[30px] text-4xl">
               <p>
-                Exciting News! We're thrilled to announce our exclusive invitation event, designed to introduce you to the groundbreaking world of our AI content creation platform and digital human technology.
+                Exciting News! We&apos;re thrilled to announce our exclusive invitation event, designed to introduce you to the groundbreaking world of our AI content creation platform and digital human technology.
               </p>
               <p className="mt-4">
                 Invite friends to join through your exclusive link and enjoy points rewards. You can also get cash rewards up to <em style={{
-                  fontWeight: '700',
-                  color: '#ffffff',
-                  fontSize: '18px'
+                  fontWeight: "700",
+                  color: "#ffffff",
+                  fontSize: "18px"
                 }}>
-                  50%</em> of the user's recharge amount.
+                  50%</em> of the user&apos;s recharge amount.
               </p>
             </div>
             <div className="card-btn mt-8">
@@ -93,7 +93,7 @@ const Reward = ({ id, }: { id: string; }) => {
 
           <div className="w-full md:w-[50%] relative"
             style={{
-              aspectRatio: '4/3',
+              aspectRatio: "4/3",
             }}>
             <img src="/Invite.png" alt="" className="absolute inset-0 w-full h-full object-contain" />
           </div>
