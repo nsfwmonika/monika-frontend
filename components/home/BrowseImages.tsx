@@ -143,12 +143,15 @@ const BrowseImages = ({ id }: { id: string }) => {
                 </div>
               </div>
               <div className="da-footer flex-col md:flex-row">
-                <div className="img-box mb-4 md:mr-8">
-                  <img className="footer-image rounded-[14px]" src={selectedImage?.original} alt="" />
-                </div>
-                <div className="img-box">
-                  <img className="footer-image rounded-[14px]" src={selectedImage?.result} alt="" />
-                </div>
+                {
+                  selectedImage?.child && (
+                    selectedImage.child.map((item,i) =>(
+                      <div className="img-box mb-4 md:mr-8" key={(i)}>
+                        <img className="footer-image rounded-[14px]" src={item} alt="" />
+                      </div>
+                    ))
+                  )
+                }
               </div>
             </div>
           </DialogContent>
