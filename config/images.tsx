@@ -74,7 +74,7 @@ export interface ImageItem {
       },{
         result: '/img/b-12-4.png',
         original: '/img/replacement/a_2.png',
-        prompt:"1girl, solo, breasts, looking_at_viewer, smile, large_breasts, brown_hair, cleavage, brown_eyes, collarbone, upper_body, swimsuit, ponytail, bikini, teeth, grin, fingernails, lips, v, black_bikini, pink_nails, mole_on_breast, realistic, photorealistic.",
+        prompt:"1girl, solo, long_hair, breasts, looking_at_viewer, smile, blue_eyes, blonde_hair, ribbon, ponytail, ass, nude, teeth, barefoot, indoors, looking_back, from_behind, grin, feet, red_ribbon, lips, pillow, toes, anus, soles, all_fours, couch, christmas, freckles, ass_focus, nose, realistic, foot_focus, partially_visible_vulva, on_couch, christmas_tree, naked_ribbon, anus_peek, mole_on_ass.",
         child: [],
       },{
         result: '/img/b-12-1.png',
@@ -84,12 +84,12 @@ export interface ImageItem {
       },{
         result: '/img/b-12-2.png',
         original: '/img/replacement/a_2.png',
-        prompt:"1girl, solo, breasts, looking_at_viewer, smile, large_breasts, brown_hair, cleavage, brown_eyes, collarbone, upper_body, swimsuit, ponytail, bikini, teeth, grin, fingernails, lips, v, black_bikini, pink_nails, mole_on_breast, realistic, photorealistic.",
+        prompt:"1girl, solo, breasts, looking_at_viewer, smile.",
         child: [],
       },{
         result: '/img/b-12-3.png',
         original: '/img/replacement/a_2.png',
-        prompt:"1girl, solo, breasts, looking_at_viewer, smile, large_breasts, brown_hair, cleavage, brown_eyes, collarbone, upper_body, swimsuit, ponytail, bikini, teeth, grin, fingernails, lips, v, black_bikini, pink_nails, mole_on_breast, realistic, photorealistic.",
+        prompt:"1girl, solo, long_hair, breasts, looking_at_viewer, smile, blue_eyes, blonde_hair, ribbon, ponytail, ass, nude, teeth, barefoot, indoors, looking_back, from_behind, grin, feet, red_ribbon, lips, pillow, toes, anus, soles, all_fours, couch, christmas, freckles, ass_focus, nose, realistic, foot_focus, partially_visible_vulva, on_couch, christmas_tree, naked_ribbon, anus_peek, mole_on_ass.",
         child: [],
       }
   ];
