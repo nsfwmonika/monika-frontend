@@ -66,6 +66,31 @@ export interface ImageItem {
         original: '/img/a-12-2.png',
         prompt:"By utilizing face swapping technology, we replaced her facial features with those of another girl, achieving face replacement while keeping the rest of the image unchanged. The composition centers her, emphasizing her calm, introspective expression. The soft, natural light enhances the serene atmosphere, while the muted color palette contrasts with the subtle gold accents, creating a harmonious balance. ",
         child: ['/img/a-12-1.png','/img/a-12-2.png','/img/a-12-3.png'],
+      },{
+        result: '/img/replacement/a_2.png',
+        original: '/img/replacement/a_2.png',
+        prompt:"",
+        child: ['/img/replacement/a_1.png','/img/replacement/a_5.jpg','/img/replacement/a_6.jpg','/img/replacement/a_4.jpg','/img/replacement/a_3.jpg'],
+      },{
+        result: '/img/b-12-4.png',
+        original: '/img/replacement/a_2.png',
+        prompt:"1girl, solo, breasts, looking_at_viewer, smile, large_breasts, brown_hair, cleavage, brown_eyes, collarbone, upper_body, swimsuit, ponytail, bikini, teeth, grin, fingernails, lips, v, black_bikini, pink_nails, mole_on_breast, realistic, photorealistic.",
+        child: [],
+      },{
+        result: '/img/b-12-1.png',
+        original: '/img/replacement/a_2.png',
+        prompt:"1girl, solo, breasts, looking_at_viewer, smile, large_breasts, brown_hair, cleavage, brown_eyes, collarbone, upper_body, swimsuit, ponytail, bikini, teeth, grin, fingernails, lips, v, black_bikini, pink_nails, mole_on_breast, realistic, photorealistic.",
+        child: [],
+      },{
+        result: '/img/b-12-2.png',
+        original: '/img/replacement/a_2.png',
+        prompt:"1girl, solo, breasts, looking_at_viewer, smile, large_breasts, brown_hair, cleavage, brown_eyes, collarbone, upper_body, swimsuit, ponytail, bikini, teeth, grin, fingernails, lips, v, black_bikini, pink_nails, mole_on_breast, realistic, photorealistic.",
+        child: [],
+      },{
+        result: '/img/b-12-3.png',
+        original: '/img/replacement/a_2.png',
+        prompt:"1girl, solo, breasts, looking_at_viewer, smile, large_breasts, brown_hair, cleavage, brown_eyes, collarbone, upper_body, swimsuit, ponytail, bikini, teeth, grin, fingernails, lips, v, black_bikini, pink_nails, mole_on_breast, realistic, photorealistic.",
+        child: [],
       }
   ];
   export default images;
