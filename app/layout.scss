@@ -557,6 +557,10 @@ h3 {
         cursor: pointer;
 
         &:hover {
+          .play {
+            opacity: .8;
+
+          }
           .tag {
             opacity: 1;
           }
@@ -571,6 +575,18 @@ h3 {
           border-radius: 24px;
           background-color: rgba(255, 255, 255, 0.8);
           opacity: 0;
+          transition: all 0.2s;
+        }
+
+        .play {
+          position: absolute;
+          z-index: 9;
+          top: 50%;
+          transform: translateY(-50%);
+          line-height: 120%;
+          color: #000019;
+          border-radius: 50%;
+          // opacity: 0;
           transition: all 0.2s;
         }
 
@@ -890,6 +906,44 @@ h3 {
         }
       }
     }
+  }
+
+
+
+  .video-dialog {
+    margin-top: 24px;
+    padding: 0 1rem;
+    height: calc(100% - 40px);
+    overflow: auto;
+    >.flex {
+      height: 100%;
+    }
+    .top-img-box {
+      display: flex;
+      justify-content: flex-end;
+      width: calc(100% - 300px);
+      height: 100%;
+      .see-image {
+        width: auto;
+        height: auto;
+        border-radius: 24px;
+        border: 1px solid #706486;
+      }
+    }
+    .tips {
+      margin-left: 12px;
+      .title {
+        margin-bottom: 4px;
+        font-weight: 700;
+      }
+      .bg-pageBackground {
+        background-color: #3d3b58;
+        color: #ffffff;
+        overflow: auto;
+        opacity: 0.8;
+      }
+    }
+    
   }
 }
 
