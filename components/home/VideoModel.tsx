@@ -70,9 +70,8 @@ const VideoModel = () => {
   };
 
   const imageStyle = {
-    width: windowWidth < 754 ? "100%" : "auto",
-    height:"100%",
-    // maxHeight: `${windowHeight * 0.8 - 50}px`
+    maxWidth: windowWidth < 754 ? "100%" : "auto",
+    height: "100%",
   };
 
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -143,8 +142,8 @@ const VideoModel = () => {
             </span>
 
             <div className="video-dialog">
-              <div className="flex items-center flex-col md:flex-row">
-                <div className="top-img-box" style={imageStyle}>
+              <div className="video-container flex items-center flex-col md:flex-row">
+                <div className="aspect-video w-full relative" style={imageStyle}>
                   <video
                     ref={videoRef}
                     className="w-full object-cover"

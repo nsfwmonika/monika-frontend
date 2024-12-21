@@ -33,7 +33,7 @@ const Roadmap = ({ id }: { id: string }) => {
                   3.Creating a personalized digital human
                 </div>
                 <div className="q-lable">
-                  4.Elize-based Agent
+                  4.Agent automation capabilities
                 </div>
               </div>
             </div>
