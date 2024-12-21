@@ -28,6 +28,7 @@ const VideoModel = () => {
   const [windowWidth, setWindowWidth] = useState(0);
   const [listImgWidth, setListImgWidth] = useState('0');
   const [selectedImage, setSelectedImage] = useState<VideoItem | null>(null);
+  const [isMuted, setIsMuted] = useState(true)
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -80,6 +81,7 @@ const VideoModel = () => {
     if (open && videoRef.current) {
       const playVideo = async () => {
         try {
+          videoRef.current!.muted = true;
           await videoRef.current?.play()
           setIsPlaying(true)
         } catch (error) {
@@ -148,9 +150,9 @@ const VideoModel = () => {
                     className="w-full object-cover"
                     playsInline
                     autoPlay
-                    muted
                     loop
                     preload="auto"
+                    controls
                   >
                     <source src={selectedImage?.original} type="video/mp4" />
                   </video>
