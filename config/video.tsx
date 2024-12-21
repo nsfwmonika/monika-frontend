@@ -8,7 +8,7 @@ export interface VideoItem {
   export const videoMo: VideoItem[] = [
     {
       result: '/video/a-1.png',
-      original: '/video/a-2.mp4',
+      original: '/video/a-3.mp4',
       prompt:'By utilizing style transfer techniques, we transform the 2D character Gojo Satoru into a realistic human representation, achieving a conversion from anime to photorealistic style. This picture depicts a muscular, white-haired male warrior with red tribal markings, holding a sword. The dramatic lighting and moody color palette evoke a sense of tension and readiness, characteristic of contemporary fantasy art.',
       child: ['/video/a-3.mp4', '/img/b-1.jpg']
     },
