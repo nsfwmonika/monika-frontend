@@ -18,6 +18,8 @@ h3 {
   color: #ffffff !important;
 
 }
+
+
 .page-main {
   position: relative;
   background-image: url("/page-bj.png");
@@ -613,6 +615,7 @@ h3 {
     max-width: 80% !important;
     height: 80%;
     max-height: 86%;
+    margin: auto;
     background-color: #444262;
     > button {
       display: none;
@@ -670,8 +673,7 @@ h3 {
           display: flex;
           align-items: flex-end;
           justify-content: center;
-          width: 300px;
-          height: 320px;
+          max-width: 300px;
           overflow: hidden;
         }
         .footer-image {
@@ -894,4 +896,37 @@ h3 {
 
 .shadow-sm {
   background-color: #1a1f21 !important;
+}
+
+@media screen and (max-width: 767px) {
+  html, 
+  body, 
+  body::-webkit-scrollbar,
+  *::-webkit-scrollbar {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    &::-webkit-scrollbar {
+      width: 0 !important;
+      height: 0 !important;
+      background: transparent !important;
+      display: none !important;
+    }
+  }
+
+  .page-main {
+    &::-webkit-scrollbar {
+      width: 0 !important;
+      height: 0 !important;
+      background: transparent !important;
+      display: none !important;
+    }
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+}
+
+html, 
+body {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }

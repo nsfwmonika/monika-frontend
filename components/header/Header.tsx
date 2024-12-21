@@ -74,13 +74,8 @@ const Header = () => {
                       title="Landing Page Boilerplate"
                       className="inline-flex items-center"
                     >
-                      <img 
-                        className="w-8 h-8" 
-                        src="/logo.png" 
-                        alt="Logo"
-                      />
-                      <span className="ml-2 text-xl font-bold tracking-wide text-gray-950 dark:text-gray-300">
-                        Panze
+                      <span className="text-xl font-bold tracking-wide ">
+                      Monika Al
                       </span>
                     </Link>
                   </div>

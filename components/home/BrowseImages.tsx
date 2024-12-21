@@ -120,7 +120,8 @@ const BrowseImages = ({ id }: { id: string }) => {
         </div>
 
         <Dialog open={open} onOpenChange={handleClose}>
-          <DialogContent className="p-dialog flex flex-col w-full md:max-w-7xl max-w-[calc(100%-2rem)] rounded-3xl !p-0 !w-fit !rounded-[32px] !max-w-full">
+          {/* <DialogContent className="p-dialog flex flex-col w-full md:max-w-7xl max-w-[calc(100%-2rem)] rounded-3xl !p-0 !w-fit !rounded-[32px] !max-w-full"> */}
+          <DialogContent className="p-dialog flex flex-col w-full md:max-w-7xl md:max-w-[calc(100%-2rem)] rounded-3xl !p-0 !w-[calc(100vw-32px)] md:!w-fit !rounded-[32px] !max-w-full mx-4 md:mx-0">
             <span className="close-icon" onClick={handleClose}>
               <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                 <path d="M53.66,48,43.31,37.66a8,8,0,0,1,0-11.32L53.66,16,48,10.34,37.66,20.69a8,8,0,0,1-11.32,0L16,10.34,10.34,16,20.69,26.34a8,8,0,0,1,0,11.32L10.34,48,16,53.66,26.34,43.31a8,8,0,0,1,11.32,0L48,53.66Z"></path>
@@ -142,7 +143,7 @@ const BrowseImages = ({ id }: { id: string }) => {
                 </div>
               </div>
               <div className="da-footer flex-col md:flex-row">
-                <div className="img-box mb-4">
+                <div className="img-box mb-4 md:mr-8">
                   <img className="footer-image rounded-[14px]" src={selectedImage?.original} alt="" />
                 </div>
                 <div className="img-box">
