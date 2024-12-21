@@ -717,6 +717,12 @@ h3 {
           height: 70%;
         }
       }
+      @media (max-width: 768px) {
+        .map-left {
+          left: 0;
+        }
+      }
+      
 
       .q-box {
         margin-bottom: 30px;
@@ -846,7 +852,6 @@ h3 {
           position: absolute;
           top: 0;
           right: 0;
-          width: 400px;
           height: 100%;
           border-radius: 10px;
         }

@@ -95,7 +95,7 @@ const Reward = ({ id, }: { id: string; }) => {
             style={{
               aspectRatio: "4/3",
             }}>
-            <img src="/Invite.png" alt="" className="absolute inset-0 w-full h-full object-contain" />
+            <img src="/Invite.png" alt="" className="absolute inset-0 w-full object-contain" />
           </div>
         </div>
 
