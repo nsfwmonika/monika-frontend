@@ -1,0 +1,41 @@
+.home-header {
+  @keyframes fadeIn {
+    0% {
+      margin-top: 60px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 0;
+      opacity: 1;
+    }
+  }
+  .heading {
+    opacity: 0;
+    animation: fadeIn 1s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    em {
+      padding: 10px;
+      font-weight: inherit;
+      font-family: SansitaSwashedLight;
+      background-image: linear-gradient(
+        135deg,
+        #9e7aff 0%,
+        #fe8bbb 33.33%,
+        #ffbd7a 66.67%,
+        #f8eac3 100%
+      );
+      background-image: linear-gradient(
+        135deg,
+        color(display-p3 0.6196078431 0.4784313725 1 / 1) 0%,
+        color(display-p3 0.9960784314 0.5450980392 0.7333333333 / 1) 33.33%,
+        color(display-p3 1 0.7411764706 0.4784313725 / 1) 66.67%,
+        color(display-p3 0.9725490196 0.9176470588 0.7647058824 / 1) 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

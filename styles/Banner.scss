@@ -1,0 +1,91 @@
+.slick-slide {
+  transition: all 0.3s ease;
+}
+
+.slick-slide:not(.slick-current) {
+  // opacity: 0.8;
+  transform: scale(0.9);
+}
+
+.slick-current {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+}
+
+.slick-prev {
+  left: 25px;
+}
+
+.slick-next {
+  right: 25px;
+}
+
+.slick-dots {
+  bottom: 10px !important;
+}
+
+.slick-dots li button:before {
+  color: white;
+  font-size: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white;
+  opacity: 1;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .slick-arrow,
+  .banner-pc {
+    display: none !important;
+  }
+  .banner-app {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  
+  .banner-app {
+    display: none !important;
+  }
+  .banner-pc {
+    display: block !important;
+  }
+}
+
+
+.banner-container .slick-dots {
+  bottom: 20px;
+}
+
+.banner-container .slick-dots li button:before {
+  color: #fff;
+  opacity: 0.5;
+  font-size: 8px;
+}
+.banner-container .slick-dots li.slick-active button:before {
+  color: #fff;
+  opacity: 1;
+  font-size: 12px;
+
+}
+
+@media (max-width: 768px) {
+  .banner-container .slick-dots {
+    bottom: 10px;
+  }
+}
+
