@@ -37,7 +37,6 @@ export function GridImgList({
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
-    // const [gridHeight, setGridHeight] = useState(660);
     const [gridHeight, setGridHeight] = useState(360);
     const [isContentVisible, setIsContentVisible] = useState(false);
     const [isClient, setIsClient] = useState(false);

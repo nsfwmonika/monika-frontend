@@ -9,7 +9,7 @@ import { siteConfig } from "@/config/site";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const isDeepfakePath = pathname === '/deepfake/';
+  const isDeepfakePath = pathname === '/made/';
 
   return (
     <ThemeProvider
