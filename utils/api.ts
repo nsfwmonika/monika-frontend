@@ -11,18 +11,12 @@ const request: RequestFunction = async (method, url, data, config = {}) => {
   try {
     let auth = ''
     let href = window.location.href
-    console.log('href---', href)
-
     if (href.indexOf("user") !== -1) {
       href = href.split("a=")[1];
-      console.log('href:', href)
-
       let decodedUrl = decodeURIComponent(href.split("&")[0]);
       decodedUrl = decodeURIComponent(decodedUrl)
       const params = new URLSearchParams(decodedUrl)
       let temp = decodedUrl.split("&")[0].split("=")[1]
-
-      console.log('auth:', JSON.parse(temp).id);
       auth = String(JSON.parse(temp).id)
     } else {
       let urlObject = new URL(href);
