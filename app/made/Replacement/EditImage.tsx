@@ -184,7 +184,7 @@ export const EditImage: FC<EditImageProps> = ({ base64Image, onSave }) => {
         const editedImageUrl = resultCanvas.toDataURL();
         // console.log("Edited image as base64:", editedImageUrl);
         let maskImage = getMaskImage()
-        onSave([editedImageUrl,maskImage || ""]);
+        onSave([editedImageUrl, maskImage || ""]);
     };
 
     const getMaskImage = () => {
@@ -273,16 +273,104 @@ export const EditImage: FC<EditImageProps> = ({ base64Image, onSave }) => {
     };
 
     return (
-        <div className="md:flex flex-col md:flex-row items-start w-full px-4 sm:px-6 lg:px-8 gap-4">
+        <div className="editImage-can md:flex flex-col md:flex-row items-start w-full gap-4 mt-[50px] md:mt-0" style={{
+            height: "100%",
+            overflow: "auto"
+        }}>
+            <div className="flex gap-4 absolute md:hidden top-[20px]">
+                <Button onClick={resetImage} variant="outline">
+                    Clear
+                </Button>
+                <Button onClick={getEditedImage}>Save</Button>
+            </div>
+
+            <div className="md:hidden">
+                <div className="flex" style={{
+                    alignItems: "center"
+                }}>
+                    <svg onClick={() => setIsEraserMode(false)} className="icon mr-4" style={{
+                        cursor: "pointer"
+                    }} viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7317" width="40" height="40"><path fill={isEraserMode ? "#333333" : "#3b82f6"} d="M358.681 586.386s-90.968 49.4-94.488 126.827c-3.519 77.428-77.427 133.74-102.063 140.778s360.157 22.971 332.002-142.444l-135.45-125.16z m169.099 52.56c14.016 13.601 17.565 32.675 7.929 42.606-9.635 9.93-28.81 6.954-42.823-6.647l-92.767-88.518c-14.015-13.6-17.565-32.675-7.929-42.605 9.636-9.93 28.81-6.955 42.824 6.646l92.766 88.518z m321.734-465.083c-25.144-17.055-47.741-1.763-57.477 3.805-29.097 19.485-237.243 221.77-327.69 315.194-11.105 14.8-18.59 26.294 34.663 79.546 44.95 44.95 65.896 42.012 88.66 22.603 37.906-37.906 199.299-262.926 258.92-348.713 9.792-14.092 29.851-54.17 2.924-72.435z" p-id="7318"></path></svg>
+
+                    <svg onClick={() => setIsEraserMode(true)} className="icon" style={{
+                        cursor: "pointer"
+                    }} viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6151" width="30" height="30"><path fill={!isEraserMode ? "#333333" : "#3b82f6"} d="M953.173333 259.413333l-187.733333-187.733333c-38.826667-38.826667-101.973333-38.826667-140.8 0L115.2 581.546667c-18.773333 18.773333-29.013333 43.946667-29.013333 70.4 0 26.453333 10.24 51.626667 29.013333 70.4l187.733333 187.733333c18.773333 18.773333 43.946667 29.013333 70.4 29.013333 26.453333 0 51.626667-10.24 70.4-29.013333L953.173333 400.213333a99.84 99.84 0 0 0 0-140.8zM383.573333 849.493333c-7.253333 7.253333-12.8 7.253333-20.053333 0l-187.733333-187.733333a14.805333 14.805333 0 0 1-4.266667-10.24c0-2.133333 0.426667-6.4 4.266667-10.24l180.906666-180.906667c2.56 4.266667 4.266667 8.533333 8.106667 11.946667l187.733333 187.733333c3.413333 3.413333 8.106667 5.546667 11.946667 8.106667l-180.906667 181.333333z" p-id="6152"></path></svg>
+                </div>
+
+                <div className="mt-1">
+                    <Label>Stroke Color</Label>
+                    <RadioGroup
+                        defaultValue="black"
+                        onValueChange={(value) => setBrushColor(value)}
+                        className="flex space-x-2"
+                    >
+                        <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="black" id="black" />
+                            <Label htmlFor="black">black</Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="white" id="white" />
+                            <Label htmlFor="white">white</Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="gray" id="gray" />
+                            <Label htmlFor="gray">gray</Label>
+                        </div>
+                    </RadioGroup>
+                </div>
+
+                <div className="mt-1">
+                    <Label>Thickness: {brushSize}px</Label>
+                    <Slider
+                        min={1}
+                        max={50}
+                        step={1}
+                        value={[brushSize]}
+                        onValueChange={(value) => setBrushSize(value[0])}
+                    />
+                </div>
+                <div className="mt-1">
+                    <Label>Opacity: {Math.round(brushOpacity * 100)}%</Label>
+                    <Slider
+                        min={0}
+                        max={1}
+                        step={0.01}
+                        value={[brushOpacity]}
+                        onValueChange={(value) => setBrushOpacity(value[0])}
+                    />
+                </div>
+                <div className="mt-1">
+                    <Label>Hardness: {Math.round(brushHardness * 100)}%</Label>
+                    <Slider
+                        min={0}
+                        max={1}
+                        step={0.01}
+                        value={[brushHardness]}
+                        onValueChange={(value) => setBrushHardness(value[0])}
+                    />
+                </div>
+                <div className="mt-1">
+                    <Label>Smoothing Precision: {Math.round(brushSmoothness * 100)}%</Label>
+                    <Slider
+                        min={0}
+                        max={1}
+                        step={0.01}
+                        value={[brushSmoothness]}
+                        onValueChange={(value) => setBrushSmoothness(value[0])}
+                    />
+                </div>
+
+            </div>
+
             <div
-                className="w-full md:w-3/4 relative"
+                className="w-full md:w-3/4 relative mt-[40px] md:mt-0 h-[500px] canvas-main"
                 ref={containerRef}
                 style={{
-                    height: 'calc(100vh       - 40px)',
+                    height: 'calc(100vh - 50px)',
                     overflow: 'hidden',
                     cursor: showCustomCursor ? 'none' : 'default',
                     position: 'relative',
-                    background: "#404149"
+                    background: "#404149",
                 }}
                 onWheel={handleWheel}
                 onMouseMove={handleMouseMove}
@@ -334,7 +422,7 @@ export const EditImage: FC<EditImageProps> = ({ base64Image, onSave }) => {
                     />
                 )}
             </div>
-            <div className="w-full md:w-1/4 space-y-4">
+            <div className="w-full md:w-1/4 space-y-4 save-hi">
                 <div className="mt-4 flex" style={{
                     alignItems: "center"
                 }}>
@@ -346,7 +434,6 @@ export const EditImage: FC<EditImageProps> = ({ base64Image, onSave }) => {
                         cursor: "pointer"
                     }} viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6151" width="30" height="30"><path fill={!isEraserMode ? "#333333" : "#3b82f6"} d="M953.173333 259.413333l-187.733333-187.733333c-38.826667-38.826667-101.973333-38.826667-140.8 0L115.2 581.546667c-18.773333 18.773333-29.013333 43.946667-29.013333 70.4 0 26.453333 10.24 51.626667 29.013333 70.4l187.733333 187.733333c18.773333 18.773333 43.946667 29.013333 70.4 29.013333 26.453333 0 51.626667-10.24 70.4-29.013333L953.173333 400.213333a99.84 99.84 0 0 0 0-140.8zM383.573333 849.493333c-7.253333 7.253333-12.8 7.253333-20.053333 0l-187.733333-187.733333a14.805333 14.805333 0 0 1-4.266667-10.24c0-2.133333 0.426667-6.4 4.266667-10.24l180.906666-180.906667c2.56 4.266667 4.266667 8.533333 8.106667 11.946667l187.733333 187.733333c3.413333 3.413333 8.106667 5.546667 11.946667 8.106667l-180.906667 181.333333z" p-id="6152"></path></svg>
                 </div>
-
 
                 <div>
                     <Label>Stroke Color</Label>
@@ -369,7 +456,6 @@ export const EditImage: FC<EditImageProps> = ({ base64Image, onSave }) => {
                         </div>
                     </RadioGroup>
                 </div>
-
 
                 <div>
                     <Label>Thickness: {brushSize}px</Label>
@@ -411,14 +497,13 @@ export const EditImage: FC<EditImageProps> = ({ base64Image, onSave }) => {
                         onValueChange={(value) => setBrushSmoothness(value[0])}
                     />
                 </div>
-                <div className="flex gap-4">
+
+
+                <div className="flex gap-4  mt-[40px]">
                     <Button onClick={resetImage} variant="outline">
                         Clear
                     </Button>
                     <Button onClick={getEditedImage}>Save</Button>
-                    {/* <Button onClick={getMaskImage} variant="outline">
-                        Get Mask
-                    </Button> */}
                 </div>
             </div>
         </div>

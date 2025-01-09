@@ -132,4 +132,11 @@ button {
     overflow: hidden;
   }
 
+  .editImage-can {
+    height: calc(100% - 50px) !important;
+    .save-hi {
+      display: none;
+    }
+  }
+
 }
