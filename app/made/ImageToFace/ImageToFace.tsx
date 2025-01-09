@@ -78,7 +78,7 @@ const ImageToFace: FC<ImageUploadProps> = ({ maxSizeInMB, onImageUpload }) => {
         const checkStatus = async () => {
             if (attempts >= maxAttempts) {
                 clearInterval(statusCheck);
-                handleNotificationOpen('transaction','Image generation timed out. Please try again.', 'warning');
+                handleNotificationOpen('transaction', 'Image generation timed out. Please try again.', 'warning');
                 return;
             }
             let dataCheck = {
@@ -147,19 +147,18 @@ const ImageToFace: FC<ImageUploadProps> = ({ maxSizeInMB, onImageUpload }) => {
 
     const ImageUploadArea = ({ image, onUpload, label }: { image: string | null, onUpload: (event: ChangeEvent<HTMLInputElement>) => void, label: string }) => (
         <div className="w-full mb-4">
-            <div className="opacity-80 mb-2">
+            <div className="opacity-80 mb-2 md:mb-2">
                 {label}
             </div>
-            <div className="relative border-1 border-dashed rounded-lg overflow-hidden" style={{
+            <div className="relative h-[60px] md:h-[150px] border-1 border-dashed rounded-lg overflow-hidden" style={{
                 borderColor: "#3b414e",
-                height:"150px"
             }}>
                 {image ? (
                     <>
                         <img src={image} alt={label} style={{
-                            margin:"auto",
-                            width:"auto",
-                            height:"100%",
+                            margin: "auto",
+                            width: "auto",
+                            height: "100%",
                             objectFit: "cover",
                         }} />
                         <Button
@@ -167,11 +166,12 @@ const ImageToFace: FC<ImageUploadProps> = ({ maxSizeInMB, onImageUpload }) => {
                             component="label"
                             startIcon={<CloudUploadIcon />}
                             sx={{
+                                padding: "2px 12px",
                                 position: 'absolute',
                                 bottom: '10px',
                                 right: '10px',
-                                background: 'rgba(30, 112, 255, 0.8)',
-                                
+                                background: '#00cae0',
+                                textTransform: "none",
                                 '&:hover': {
                                     background: 'rgba(26, 98, 224, 0.8)',
                                 },
@@ -229,23 +229,23 @@ const ImageToFace: FC<ImageUploadProps> = ({ maxSizeInMB, onImageUpload }) => {
 
     return (
         <div className="flex flex-col md:flex-row md:justify-between w-full mx-auto h-full overflow-y-auto">
-            <div className="w-full md:w-1/5 p-2 md:px-4 md:mr-4 mb-8 md:mb-0 flex flex-col md:h-full overflow-y-auto rounded-[14px] aside-left" style={{
-                background: "#1d2129"
+            <div className="w-full md:w-1/5 p-2 md:px-4 md:mr-4 mb-8 md:mb-0 flex flex-col h-full overflow-y-auto rounded-[14px]  min-h-[288px] md:max-h-[100%] aside-left" style={{
+                background: "#1d2129",
             }}>
                 <div className='aside-config'>
                     <ImageUploadArea
                         image={baseImage}
                         onUpload={(e) => handleImageUpload(e, setBaseImage)}
-                        label="Please upload your face (Max Size 2M)"
+                        label="Your face (Max Size 2M)"
                     />
                     <ImageUploadArea
                         image={faceImage}
                         onUpload={(e) => handleImageUpload(e, setFaceImage)}
-                        label="Please upload the image to be replaced (Max Size 2M)"
+                        label="Image to be replaced (Max Size 2M)"
                     />
                 </div>
 
-                <div className='foot-main pb-4'>
+                <div className='foot-main md:pb-4'>
                     {/* <div className="mt-4">
                         <Button
                             variant="contained"

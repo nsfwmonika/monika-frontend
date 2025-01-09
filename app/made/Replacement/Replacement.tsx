@@ -127,11 +127,11 @@ const Replacement: FC = () => {
     };
 
     const ImageUploadArea = ({ image, onUpload, label, isBtn }: { image: string | null, onUpload: (event: ChangeEvent<HTMLInputElement>) => void, label: string, isBtn: boolean }) => (
-        <div className="w-full mb-4">
+        <div className="w-full">
             <div className="flex items-center justify-between opacity-80 mb-2">
                 {label}
                 {
-                    isBtn && (
+                    image && (
                         <div className="mr-1">
                             <Button
                                 variant="contained"
@@ -139,7 +139,7 @@ const Replacement: FC = () => {
                                 fullWidth
                                 sx={{
                                     padding: "2px 4px !important",
-                                    background: "#2260cd"
+                                    background: "#00cae0",
                                 }}
                             >
                                 Edit
@@ -149,10 +149,8 @@ const Replacement: FC = () => {
                 }
 
             </div>
-            <div className="relative h-40 border-1 border-dashed rounded-lg overflow-hidden" style={{
+            <div className="relative h-[70px] md:h-[150px] border-1 border-dashed rounded-lg overflow-hidden" style={{
                 borderColor: "#3b414e",
-                height: "100px"
-
             }}>
                 {image ? (
                     <>
@@ -167,7 +165,7 @@ const Replacement: FC = () => {
                                 position: 'absolute',
                                 bottom: '10px',
                                 right: '10px',
-                                background: 'rgba(30, 112, 255, 0.8)',
+                                background: '#00cae0',
                                 textTransform: "none",
                                 '&:hover': {
                                     background: 'rgba(26, 98, 224, 0.8)',
@@ -241,15 +239,16 @@ const Replacement: FC = () => {
     }
 
     return (
-        <div className="flex flex-col md:flex-row md:justify-between w-full mx-auto h-full">
-           <div className="w-full md:w-1/5 p-2 md:px-4 mr-4 mb-8 md:mb-0 flex flex-col md:h-full overflow-y-auto rounded-[14px] aside-left" style={{
+        <div className="md:flex flex-col md:flex-row md:justify-between w-full mx-auto h-full overflow-y-auto" style={{
+        }}>
+            <div className="w-full md:w-1/5 p-2 md:px-4 md:mr-4 mb-8 md:mb-0 flex flex-col h-full overflow-y-auto rounded-[14px]  max-h-[290px] md:max-h-[100%] aside-left" style={{
                 background: "#1d2129"
             }}>
                 <div className='aside-config'>
                     <div className="opacity-80">
                         Describe your image
                     </div>
-                    <div className="mt-2 mb-6 h-[100px]">
+                    <div className="mt-2 mb-6 h-[60px] md:h-[100px]">
                         <TextField
                             id="outlined-multiline-static"
                             label=""
@@ -260,14 +259,16 @@ const Replacement: FC = () => {
                             onChange={(e) => setPromptText(e.target.value)}
                             sx={{
                                 width: "100%",
-                                height: "100%",
+                                height: "70px",
                                 background: "#282e37",
                                 borderRadius: "6px",
                                 border: "1px solid rgba(184,221,255,.12)",
                                 '& .MuiInputBase-root': {
+                                    padding:"4px 14px",
                                     height: "100%",
                                 },
                                 '& .MuiInputBase-input': {
+                                    height:"100% !important",
                                     color: 'rgba(224,245,255,.85)',
                                     borderColor: "#434756",
                                 },

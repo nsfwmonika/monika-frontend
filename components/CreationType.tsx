@@ -17,7 +17,7 @@ const CreationType: React.FC<CreationTypeProps> = ({ selectedType, onCreationTyp
 
     return (
         <ButtonGroup variant="contained"
-            className="custom-button-group mt-2"
+            className="custom-button-group mt-1 md:mt-2"
             sx={{
                 display: "flex",
                 justifyContent: 'flex-start',
@@ -31,13 +31,13 @@ const CreationType: React.FC<CreationTypeProps> = ({ selectedType, onCreationTyp
                     key={item.id}
                     onClick={() => onCreationTypeSelect(item)}
                     disabled={disabled}
+                    className='text-1xl'
                     sx={{
-                        marginRight: "12px",
+                        marginRight: "10px",
                         marginBottom: "8px",
-                        padding: '0px 18px',
+                        padding: '4px 10px',
                         border: "none !important",
-                        borderRadius: '24px !important',
-                        fontSize: '16px',
+                        borderRadius: '4px !important',
                         color: selectedType === item.id ? '#8ce99a' : '#ffffff',
                         textTransform: 'none',
                         whiteSpace: "nowrap",

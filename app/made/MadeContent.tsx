@@ -71,6 +71,17 @@ const MadeContent = () => {
         }
     };
 
+    const onMenuMo = (newValue: string) =>{
+        setValue(newValue);
+        try {
+            const currentParams = new URLSearchParams(searchParams?.toString());
+            currentParams.set('type', newValue);
+            router.push(`/made?${currentParams.toString()}`);
+        } catch (error) {
+            console.error('Error updating URL parameters:', error);
+        }
+    }
+
     const handleSelectCharacter = (character: Character) => {
         setSelectedCharacter(character);
     };
@@ -79,7 +90,7 @@ const MadeContent = () => {
         <div className="mx-auto px-4 sm:px-6 pb-4 w-full deepfake-page">
             <TabContext value={value}>
                 <div 
-                    className="flex justify-between relative items-center py-4 md:py-10 px-4 sm:px-6 lg:px-8 header-mob"
+                    className="flex justify-between relative items-center md:py-10 px-4 lg:px-8 header-mob"
                     style={{ background: "#111114" }}
                 >
                     <div>
@@ -117,7 +128,7 @@ const MadeContent = () => {
                         <div
                             key={i}
                             className={value === item.id ? "menu-active" : ""}
-                            onClick={() => setValue(item.id)}
+                            onClick={() => onMenuMo(item.id)}
                         >
                             {item.name}
                         </div>

@@ -142,9 +142,9 @@ const TextImage: FC = () => {
     };
 
     return (
-        <div className="flex flex-col md:flex-row md:justify-between w-full mx-auto h-full overflow-y-auto" style={{
+        <div className="md:flex flex-col md:flex-row md:justify-between w-full mx-auto h-full overflow-y-auto" style={{
         }}>
-            <div className="w-full md:w-1/5 p-2 md:px-4 mr-4 mb-8 md:mb-0 flex flex-col md:h-full overflow-y-auto rounded-[14px] aside-left" style={{
+            <div className="w-full md:w-1/5 p-2 md:px-4 md:mr-4 mb-8 md:mb-0 flex flex-col h-full overflow-y-auto rounded-[14px]  max-h-[260px] md:max-h-[100%] aside-left" style={{
                 background: "#1d2129"
             }}>
                 <div className='aside-config'>
@@ -156,7 +156,7 @@ const TextImage: FC = () => {
                             disabled={false}
                         />
                     </div>
-                    <div className="mt-4 opacity-80" style={{ color: "#ebf8ff" }}>
+                    <div className="mt-2 opacity-80" style={{ color: "#ebf8ff" }}>
                         Describe your image
                     </div>
                     <div className="mt-2 h-[100px]">

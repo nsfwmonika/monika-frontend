@@ -163,9 +163,9 @@ const ImageToImage: FC = () => {
     };
 
     return (
-        <div className="flex flex-col md:flex-row md:justify-between w-full mx-auto h-full">
-            <div className="w-full md:w-1/5 p-2 md:px-4 mr-4 mb-8 md:mb-0 flex flex-col md:h-full overflow-y-auto rounded-[14px] aside-left" style={{
-                background: "#1d2129"
+        <div className="flex flex-col md:flex-row md:justify-between w-full mx-auto h-full overflow-y-auto">
+           <div className="w-full md:w-1/5 p-2 md:px-4 md:mr-4 mb-8 md:mb-0 flex flex-col h-full overflow-y-auto rounded-[14px]  min-h-[280px] md:max-h-[100%] aside-left" style={{
+                background: "#1d2129",
             }}>
                 <div className='aside-config'>
                     <div>
@@ -176,10 +176,10 @@ const ImageToImage: FC = () => {
                             disabled={false}
                         />
                     </div>
-                    <div className="mt-4 opacity-80">
+                    <div className="mt-2 opacity-80">
                         Upload your image (Max Size 2M)
                     </div>
-                    <div className="mt-2 h-[150px] relative border-1 border-dashed rounded-lg overflow-hidden" style={{
+                    <div className="mt-2 h-[80px] md:h-[150px] relative border-1 border-dashed rounded-lg overflow-hidden" style={{
                         borderColor: "#3b414e"
                     }}>
                         {uploadedImage ? (
