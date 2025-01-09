@@ -9,30 +9,26 @@ type RequestFunction = <T = any>(
 
 const request: RequestFunction = async (method, url, data, config = {}) => {
   try {
+    let auth = ''
     let href = window.location.href
     console.log('href---', href)
 
-    let auth = ''
-
     if (href.indexOf("user") !== -1) {
-      href = href.split("=")[1];
-      let b = href.split("&");
-      let decodedUrl = decodeURIComponent(b[0]);
+      href = href.split("a=")[1];
+      console.log('href:', href)
+
+      let decodedUrl = decodeURIComponent(href.split("&")[0]);
       decodedUrl = decodeURIComponent(decodedUrl)
       const params = new URLSearchParams(decodedUrl)
       let temp = decodedUrl.split("&")[0].split("=")[1]
+
       console.log('auth:', JSON.parse(temp).id);
       auth = String(JSON.parse(temp).id)
-
     } else {
       let urlObject = new URL(href);
       let searchParams = urlObject.searchParams;
-      console.log('searchParams---', searchParams)
-
       auth = searchParams.get('auth') || "";
-      console.log('auth---', auth)
     }
-
     const instance = axios.create({
       baseURL: "https://rpc.nsfwmonika.ai/client",
       timeout: 50000,
