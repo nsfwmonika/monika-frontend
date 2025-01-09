@@ -242,11 +242,11 @@ const Replacement: FC = () => {
 
     return (
         <div className="flex flex-col md:flex-row md:justify-between w-full mx-auto h-full">
-            <div className="w-full md:w-1/5 p-2 md:p-4 mr-4 mb-8 md:mb-0 flex flex-col md:h-full overflow-y-auto rounded-[14px] aside-left" style={{
+           <div className="w-full md:w-1/5 p-2 md:px-4 mr-4 mb-8 md:mb-0 flex flex-col md:h-full overflow-y-auto rounded-[14px] aside-left" style={{
                 background: "#1d2129"
             }}>
                 <div className='aside-config'>
-                    <div className="mt-4 opacity-80">
+                    <div className="opacity-80">
                         Describe your image
                     </div>
                     <div className="mt-2 mb-6 h-[100px]">

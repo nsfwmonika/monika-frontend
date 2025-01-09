@@ -229,7 +229,7 @@ const ImageToFace: FC<ImageUploadProps> = ({ maxSizeInMB, onImageUpload }) => {
 
     return (
         <div className="flex flex-col md:flex-row md:justify-between w-full mx-auto h-full overflow-y-auto">
-            <div className="w-full md:w-1/5 p-2 md:p-4 md:mr-4 mb-8 md:mb-0 flex flex-col md:h-full overflow-y-auto rounded-[14px] aside-left" style={{
+            <div className="w-full md:w-1/5 p-2 md:px-4 md:mr-4 mb-8 md:mb-0 flex flex-col md:h-full overflow-y-auto rounded-[14px] aside-left" style={{
                 background: "#1d2129"
             }}>
                 <div className='aside-config'>

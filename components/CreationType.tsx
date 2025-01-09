@@ -17,7 +17,7 @@ const CreationType: React.FC<CreationTypeProps> = ({ selectedType, onCreationTyp
 
     return (
         <ButtonGroup variant="contained"
-            className="custom-button-group mt-4"
+            className="custom-button-group mt-2"
             sx={{
                 display: "flex",
                 justifyContent: 'flex-start',

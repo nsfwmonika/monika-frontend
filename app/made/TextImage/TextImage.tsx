@@ -144,8 +144,8 @@ const TextImage: FC = () => {
     return (
         <div className="flex flex-col md:flex-row md:justify-between w-full mx-auto h-full overflow-y-auto" style={{
         }}>
-            <div className="w-full md:w-1/5 md:p-4 md:mr-4 mb-8 md:mb-0 p-2 md:flex flex-col md:h-full rounded-[14px] aside-left" style={{
-                background: "#1d222a"
+            <div className="w-full md:w-1/5 p-2 md:px-4 mr-4 mb-8 md:mb-0 flex flex-col md:h-full overflow-y-auto rounded-[14px] aside-left" style={{
+                background: "#1d2129"
             }}>
                 <div className='aside-config'>
                     <div>
