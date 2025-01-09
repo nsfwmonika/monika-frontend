@@ -13,7 +13,7 @@ const baseSiteConfig = {
     {
       name: "Monika Al",
       url: "",
-      twitter: 'https://x.com/NSFW_monika',
+      twitter: 'https://x.com/NSFW_monika_',
     }
   ],
   themeColors: [
@@ -27,11 +27,11 @@ const baseSiteConfig = {
     apple: "/logo.png",
   },
   headerLinks: [
-    { name: 'Twitter', href: "https://x.com/NSFW_monika", icon: BsTwitterX },
+    { name: 'Twitter', href: "https://x.com/NSFW_monika_", icon: BsTwitterX },
     { name: 'Telegram', href: "https://t.me/nsfwmonika_bot", icon: BsTelegram },
   ],
   footerLinks: [
-    { name: 'twitter', href: "https://x.com/NSFW_monika", icon: BsTwitterX },
+    { name: 'twitter', href: "https://x.com/NSFW_monika_", icon: BsTwitterX },
     { name: 'telegram', href: "https://t.me/nsfwmonika_bot", icon: BsTelegram },
     { name: 'github', href: "https://github.com/nsfwmonika", icon: BsGithub },
   ],
