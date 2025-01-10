@@ -1,6 +1,5 @@
 import { SiteConfig } from "@/types/siteConfig";
 import { BsGithub, BsTwitterX, BsTelegram } from "react-icons/bs";
-
 const baseSiteConfig = {
   name: "Monika Al",
   description:
@@ -20,7 +19,8 @@ const baseSiteConfig = {
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
-  nextThemeColor: 'dark', // next-theme option: system | dark | light
+  nextThemeColor: 'dark',
+   // next-theme option: system | dark | light
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
